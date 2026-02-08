@@ -3,9 +3,13 @@ on:
   push:
     tags:
       - 'v*'
+
 jobs:
   release:
     runs-on: ${{ matrix.os }}
+    # 关键点：增加权限声明
+    permissions:
+      contents: write
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
