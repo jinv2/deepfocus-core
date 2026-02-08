@@ -1,0 +1,17 @@
+{
+  "name": "deepfocus-core",
+  "version": "1.1.0",
+  "main": "main.js",
+  "description": "Deep Focus Agent with L-A-T-T Protocol",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
+}
