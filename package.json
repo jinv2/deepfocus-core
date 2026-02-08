@@ -1,0 +1,31 @@
+{
+  "name": "deepfocus-core",
+  "version": "1.1.1",
+  "main": "main.js",
+  "author": {
+    "name": "jinv2",
+    "email": "jinv2@example.com"
+  },
+  "description": "Deep Focus Agent with L-A-T-T Protocol",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.jinv2.deepfocus",
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "maintainer": "jinv2 <jinv2@example.com>"
+    },
+    "win": {
+      "target": "portable"
+    }
+  },
+  "devDependencies": {
+    "electron": "^32.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
+}
