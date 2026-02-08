@@ -10,14 +10,10 @@
   "build": {
     "appId": "com.jinv2.deepfocus",
     "linux": {
-      "target": ["deb"],
-      "category": "Utility"
+      "target": ["AppImage", "deb"]
     },
     "win": {
-      "target": ["portable"]
-    },
-    "mac": {
-      "target": ["dmg"]
+      "target": "portable"
     }
   },
   "devDependencies": {

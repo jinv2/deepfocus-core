@@ -11,21 +11,13 @@ jobs:
       contents: write
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        # 先集中火力攻克 Linux，成功后再加回 windows 和 macos
+        os: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      # 关键步骤：只有在 Linux 环境下安装打包工具 fpm
-      - name: Install Linux Dependencies
-        if: matrix.os == 'ubuntu-latest'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ruby-full
-          sudo gem install fpm
-
       - run: npm install
       - name: Build/Release Electron App
         uses: samuelmeuli/action-electron-builder@v1
