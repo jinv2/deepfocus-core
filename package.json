@@ -2,6 +2,10 @@
   "name": "deepfocus-core",
   "version": "1.1.0",
   "main": "main.js",
+  "author": {
+    "name": "jinv2",
+    "email": "jinv2@example.com"
+  },
   "description": "Deep Focus Agent with L-A-T-T Protocol",
   "scripts": {
     "start": "electron .",
@@ -10,7 +14,8 @@
   "build": {
     "appId": "com.jinv2.deepfocus",
     "linux": {
-      "target": ["AppImage", "deb"]
+      "target": ["AppImage", "deb"],
+      "maintainer": "jinv2 <jinv2@example.com>"
     },
     "win": {
       "target": "portable"
